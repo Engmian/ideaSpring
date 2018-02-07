@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="SSMdemo:javaEEApplication exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SSMdemo_javaEEApplication_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SSMdemo/javaeeApplication/javaEEApplication" />
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>

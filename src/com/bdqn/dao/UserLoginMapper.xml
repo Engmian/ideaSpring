@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.UserLoginMapper">
+    <resultMap id="userLogin" type="UserLogin">
+        <result property="uname" column="uname"/>
+        <result property="upwd" column="upwd"/>
+    </resultMap>
+
+    <select id="getSelectUserLogin" resultMap="userLogin" parameterType="String">
+        SELECT * FROM userlogin
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="uname != null">
+                AND uname=#{uname}
+            </if>
+            <if test="upwd != null">
+                AND upwd=#{upwd}
+            </if>
+        </trim>
+    </select>
+</mapper>
